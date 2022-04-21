@@ -1,0 +1,30 @@
+@model IList<Vehicle>
+
+h3 class="mb-2">Vehicle List</h3>
+
+<table class="table mb-4">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Registration</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+         @foreach(var v in Model) 
+        {
+            <tr>
+                <td>@v.Id</td>
+                <td>@v.Reg</td>
+                <td>@v.Make</td>
+                <td>@v.Model</td>
+                </tr>
+        }
+    </tbody>
+</table>
+    
+
+
+

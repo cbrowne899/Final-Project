@@ -1,0 +1,12 @@
+c:\Users\Neil Browne\Documents\Web\New\Assignment-FMS-template (2)\FMS.Data\bin\Debug\net6.0\FMS.Data.deps.json
+c:\Users\Neil Browne\Documents\Web\New\Assignment-FMS-template (2)\FMS.Data\bin\Debug\net6.0\FMS.Data.dll
+c:\Users\Neil Browne\Documents\Web\New\Assignment-FMS-template (2)\FMS.Data\bin\Debug\net6.0\ref\FMS.Data.dll
+c:\Users\Neil Browne\Documents\Web\New\Assignment-FMS-template (2)\FMS.Data\bin\Debug\net6.0\FMS.Data.pdb
+c:\Users\Neil Browne\Documents\Web\New\Assignment-FMS-template (2)\FMS.Data\obj\Debug\net6.0\FMS.Data.csproj.AssemblyReference.cache
+c:\Users\Neil Browne\Documents\Web\New\Assignment-FMS-template (2)\FMS.Data\obj\Debug\net6.0\FMS.Data.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Neil Browne\Documents\Web\New\Assignment-FMS-template (2)\FMS.Data\obj\Debug\net6.0\FMS.Data.AssemblyInfoInputs.cache
+c:\Users\Neil Browne\Documents\Web\New\Assignment-FMS-template (2)\FMS.Data\obj\Debug\net6.0\FMS.Data.AssemblyInfo.cs
+c:\Users\Neil Browne\Documents\Web\New\Assignment-FMS-template (2)\FMS.Data\obj\Debug\net6.0\FMS.Data.csproj.CoreCompileInputs.cache
+c:\Users\Neil Browne\Documents\Web\New\Assignment-FMS-template (2)\FMS.Data\obj\Debug\net6.0\FMS.Data.dll
+c:\Users\Neil Browne\Documents\Web\New\Assignment-FMS-template (2)\FMS.Data\obj\Debug\net6.0\ref\FMS.Data.dll
+c:\Users\Neil Browne\Documents\Web\New\Assignment-FMS-template (2)\FMS.Data\obj\Debug\net6.0\FMS.Data.pdb

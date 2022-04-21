@@ -1,0 +1,29 @@
+@model IList<Vehicle>
+
+<h3 class="mb-3">Vehicles</h3>
+<a asp-controller= "Vehicle" asp-action="Create">Create</a>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Registration</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var s in Model)
+            {
+                
+            <tr>
+                <td>@s.Reg</td>
+                <td>@s.Make</td>
+                <td>@s.Model</td>
+                <td>@s.Year</td>
+                <td><a asp-controller="Vehicle" asp-action="Index" asp-route-id="@s.Reg">View</a></td>
+            </tr>
+            }
+    </tbody>
+</table>
