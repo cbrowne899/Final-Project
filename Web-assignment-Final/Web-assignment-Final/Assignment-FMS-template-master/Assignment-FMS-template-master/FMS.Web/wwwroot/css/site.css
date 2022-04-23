@@ -1,0 +1,114 @@
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.carousel {
+width:640px;
+height:360px;
+margin: auto;
+}
+html {
+  font-size: 14px;
+}
+
+.bg-1 {
+  background-color: #1abc9c; /* Green */
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/* Custom CSS */
+.callout {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgb(211, 18, 18);
+  border-left-color: rgb(216, 12, 12);
+  border-left-width: .75rem;
+  border-radius: .25rem;
+}
+
+.callout-primary {
+  border-left-color: cornflowerblue;
+}
+
+.callout-info {
+  border-left-color: deepskyblue;
+}
+
+.callout-warning {
+  border-left-color: orange;
+}
+
+.callout-danger {
+  border-left-color: red;
+}
+
+.callout-secondary {
+  border-left-color: silver;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.carousel {
+width:640px;
+height:360px;
+margin: auto;
+}
+
+a {
+  color: #4d5ce4;
+  font-weight: 600;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 2px;
+  background-color: #332d2c;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 5px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 1px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 10px;
+}

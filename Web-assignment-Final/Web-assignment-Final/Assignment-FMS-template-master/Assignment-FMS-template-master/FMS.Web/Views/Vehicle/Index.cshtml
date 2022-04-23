@@ -1,0 +1,45 @@
+@model VehicleSearchViewModel
+
+    <div class="flex-container">
+      <partial name="_Breadcrumbs" model=@(new [] { ("/", "Home"), ("/vehicle", "Vehicles"), ("","Index") })> 
+
+<h3 class="mb-3">Vehicle List</h3>
+
+<a class="btn btn-sm btn-primary my-3" asp-controller="Vehicle" asp-action="Create" >Create</a>     
+
+<partial name="_Search" /> 
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Registration</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+         @foreach(var v in Model.Vehicles) 
+        {
+            <tr>
+                <td>@v.VehicleId</td>
+                <td>@v.Reg</td>
+                <td>@v.Make</td>
+                <td>@v.Model</td>
+                <td>
+
+                    <div class="mt-4 d-flex flex-row justify-content-between">
+                    <!-- Add View link -->
+                    <a class="btn btn-sm btn-info" btn btn-link asp-controller="Vehicle" asp-action="Details" asp-route-id=@v.VehicleId>View</a>
+                    <!-- Add edit link  -->
+                    <a class="btn btn-sm btn-info" btn btn-link asp-controller="Vehicle" asp-action="Edit" asp-route-id=@v.VehicleId>Edit</a>
+                    <!-- Add delete link -->
+                    <a class="btn btn-sm btn-info" btn btn-link asp-controller="Vehicle" asp-action="Delete" asp-route-id=@v.VehicleId>Delete</a>
+                    </div>
+                </td>
+            </tr>
+        }          
+    </tbody>
+</table>
+</div>

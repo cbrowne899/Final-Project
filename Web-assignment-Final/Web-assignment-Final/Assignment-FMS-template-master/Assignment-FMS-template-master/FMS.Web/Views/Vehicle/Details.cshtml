@@ -1,0 +1,78 @@
+@model Vehicle
+
+<!-- breadcrumb to aid the user and show their path -->
+<partial name="_BreadCrumbs" model=@(new [] {
+    ("/","Home"),
+    ("/vehicle","Vehicles"),
+    ($"/vehicle/details/{Model.VehicleId}",$"{Model.VehicleId}"),
+    ("vehicle","Details")
+}) />
+
+
+    <!-- description list to show all the vehicle details -->
+    <div class="card shadow rounded mt-4 p-1 mb-2">
+        <div class="row pl-3">
+            <!-- vehicle information -->
+            <div class="col-8 mt-4">
+                <h3 class="mb-2">VehicleDetails</h3>
+                <dl class="row">
+                    <dt class="col-5">Registration</dt>
+                    <dd class="col-7">@Model.Reg</dd>
+                    <dt class="col-5">Make</dt>
+                    <dd class="col-7">@Model.Make</dd>
+
+                    <dt class="col-5">Model</dt>
+                    <dd class="col-7">@Model.Model</dd>
+                    <dt class="col-5">Fuel Type</dt>
+                    <dd class="col-7">@Model.FuelType</dd>
+
+                    <dt class="col-5">Body Type</dt>
+                    <dd class="col-7">@Model.BodyType</dd>
+
+                    <dt class="col-5">Transmission Type</dt>
+                    <dd class="col-7">@Model.TransmissionType</dd>
+
+                    <dt class="col-5">Number of Doors</dt>
+                    <dd class="col-7">@Model.Doors</dd>
+
+                    <dt class="col-5">Mot Due On: </dt>
+                    <dd class="col-7">@Model.MotDue</dd>
+                </dl>
+            </div>
+
+             
+        </div> 
+
+        <!-- user's action options -->
+    
+            <div class="mt-4 d-flex flex-row justify-content-between">
+            
+            <a asp-action="CreateMot" asp-route-id="@Model.VehicleId" class = "btn btn-sm btn-dark mr-2">
+                <i class="bi bi-bag-plus"></i></i>Add MOT Record
+            </a>
+
+            <a asp-condition=@User.HasOneOfRoles("admin,manager") asp-controller="Vehicle" 
+                   asp-action="Edit" asp-route-id="@Model.VehicleId" class="btn btn-sm btn-dark me-3">
+                    <i class="bi bi-pen"></i> Edit
+                </a>
+
+            </div>
+
+                 <div>
+                <!-- toggle display of Delete Modal -->
+                <button asp-condition=@(User.IsInRole("manager")) type="button" class="btn btn-sm btn-danger" 
+                        data-bs-toggle="modal" data-bs-target="#deleteVehicleModal">
+                    <i class="bi bi-trash"></i> Delete
+                </button>
+            </div>
+
+            </div>
+ </div>
+        
+
+<div class="row pt-3">
+    <partial name="_Mots" />
+</div>
+
+<!-- Delete Modal -->
+<partial name="_DeleteModal" />
